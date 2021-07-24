@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MSAYearBook.Models
 {
@@ -14,5 +15,8 @@ namespace MSAYearBook.Models
         public string GitHub { get; set; }
 
         public string ImageURI { get; set; }
+        public ICollection<Project> Projects { get; set; } = new List<Project>();
+
+        public ICollection<Comment> Comments { get; set; } = new List<Comment>();
     }
 }
